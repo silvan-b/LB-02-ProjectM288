@@ -20,10 +20,15 @@ function rechnen(form)
 
     let modal = document.getElementById('id01');{
 
-}
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-    modal.style.display = "none";
 }
-}
+document.getElementById("submitLogin").addEventListener("click", (e) => {
+    e.preventDefault();
+
+    if (FormLogin.inputUsername.value === "Silvan" && FormLogin.inputPassword.value === "123456") {
+        window.location.href = 'second.html';
+    } else {
+        alert("Wrong");
+    }
+})
+

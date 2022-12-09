@@ -1,0 +1,26 @@
+html, body{
+    background: rgb(241,134,186);
+    background: radial-gradient(circle, rgba(241,134,186,1) 0%, rgba(119,173,236,1) 100%);
+    color: #000;
+    font-family: sans-serif;
+}
+
+p, h1{
+    text-align:center;
+}
+
+table {
+    margin: 0 auto;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}

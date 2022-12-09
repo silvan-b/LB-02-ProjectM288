@@ -1,15 +1,16 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<!DOCTYPE>
 <html><head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <title>Promille-Rechner</title>
-    <link rel="stylesheet" href="styles.css">
+
     <script src="scripts/scripts.js"></script>
+    <link rel="stylesheet" href="secondstyles.css">
 </head>
 <body>
 <h1> Promille-Rechner</h1>
 
 <p></p>
-
+<div class="container">
 <form name="form1" action="#">
     <table><tr>
         <td>Körpergewicht:</td>
@@ -21,7 +22,7 @@
         <td>Trinkmenge:</td>
         <td><input name="menge" size="5" onclick ="this.value=''">ml</td>
     </tr><tr>
-        <td>Zeitspanne (Trinken-Fahrt):</td>
+        <td>Zeitspanne (Trinken bis Fahrt):</td>
         <td><input name="zeit" size="5" onclick ="this.value=''">h</td>
     </tr></table>
     <p>
@@ -35,5 +36,6 @@
         <td><input type="text" name="promille" value="" size="5"></td>
     </tr></table>
 </form>
+</div>
 </body>
 </html>

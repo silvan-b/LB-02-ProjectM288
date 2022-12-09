@@ -2,52 +2,54 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Login-Screen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
-    <script src="scripts/scripts.js"></script>
+    <title>Login-Screen</title>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
-
-<header>
-    <nav></nav>
-</header>
-
-<main>
-    <button onclick="document.getElementById('id01').style.display='block'">Login</button>
-
-    <div id="id01" class="modal">
-  <span onclick="document.getElementById('id01').style.display='none'"
-        class="close" title="Close Modal">&times;</span>
-
-        <form class="modal-content animate" action="/action_page.php">
-            <div class="imgcontainer">
-                <img src="img_avatar2.png" alt="Avatar" class="avatar">
+<main id="mainLogin">
+    <div class="login-box">
+        <h2>Login</h2>
+        <form id="FormLogin">
+            <div class="user-box">
+                <input type="text" id="inputUsername" name="" required="true">
+                <label>Username</label>
             </div>
-
-            <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="uname" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                <button type="submit">Login</button>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+            <div class="user-box">
+                <input type="password" id="inputPassword" name="" required="true">
+                <label>Password</label>
             </div>
-
-            <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw">Forgot <a href="#">password?</a></span>
-            </div>
+            <a href="#" id="submitLogin">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
+            </a>
         </form>
     </div>
+
 </main>
+</body>
 
+<!-- Footer Placeholder
 <footer>
-
+    <div class="container">
+        <footer class="footer mt-auto py-3 bg-light">
+            <div class="container">
+                <span class="text-muted">Place sticky footer content here.</span>
+            </div>
+        </footer>
+        </footer>
+    </div>
 </footer>
-
+-->
+<!-- Bootstrap JavaScripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="scripts/scripts.js"></script>
 </body>
 </html>
