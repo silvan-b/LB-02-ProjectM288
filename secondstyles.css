@@ -16,8 +16,9 @@ table {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 400px;
-    padding: 40px;
+    width: 600px;
+    height: 600px;
+    padding: 60px;
     transform: translate(-50%, -50%);
     background: #ffffff;
     box-sizing: border-box;
