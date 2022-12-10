@@ -7,33 +7,32 @@
     <link rel="stylesheet" href="secondstyles.css">
 </head>
 <body>
-<h1> Promille-Rechner</h1>
 
-<p></p>
 <div class="container">
+    <h1> Promille-Rechner</h1>
 <form name="form1" action="#">
     <table><tr>
         <td>Körpergewicht:</td>
-        <td><input name="gewicht" size="5" onclick ="this.value=''">kg</td>
+        <td><input class="input" type="number" name="gewicht" size="5" onclick ="this.value=''">kg</td>
     </tr><tr>
         <td>Alkoholgehalt:</td>
-        <td><input name="alkohol" size="5" onclick ="this.value=''">%</td>
+        <td><input class="input" type="number" name="alkohol" size="5" onclick ="this.value=''">%</td>
     </tr><tr>
         <td>Trinkmenge:</td>
-        <td><input name="menge" size="5" onclick ="this.value=''">ml</td>
+        <td><input class="input" type="number" name="menge" size="5" onclick ="this.value=''">ml</td>
     </tr><tr>
         <td>Zeitspanne (Trinken bis Fahrt):</td>
-        <td><input name="zeit" size="5" onclick ="this.value=''">h</td>
+        <td><input class="input" type="number" name="zeit" size="5" onclick ="this.value=''">h</td>
     </tr></table>
     <p>
         <input type="radio" name="geschlecht" checked value="w">weiblich
         <input type="radio" name="geschlecht" value="m">männlich<br>
     </p>
 
-    <p> <input type="button" value="Berechnen" onclick="rechnen(this.form)">
-    <table align="center"><tr>
+    <p> <button class="button-85" role="button" type="button" onclick="rechnen(this.form)">Berechnen</button>
+    <table><tr>
         <td>Voraussichtliche Promille</td>
-        <td><input type="text" name="promille" value="" size="5"></td>
+        <td><input class="input" id="promille" type="number" name="promille" value="" size="5" readonly></td>
     </tr></table>
 </form>
 </div>
