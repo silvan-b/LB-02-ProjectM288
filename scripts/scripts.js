@@ -42,3 +42,15 @@ $('.switch label').on('click', function(){
     }
 });
 
+function save {
+    //put data in data.json
+    $promille = $_POST['promille'];
+    $data = array('promille'=>$promille);
+    $jsonData = json_encode($data);
+    file_put_contents('data.json',$jsonData);
+
+    //fetch the data
+    $jsonData = file_get_contents('data.json');
+    $data = json_decode($jsonData, true);
+    echo $data['promille'];
+}
