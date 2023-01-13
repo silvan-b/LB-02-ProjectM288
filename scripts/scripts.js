@@ -42,15 +42,41 @@ $('.switch label').on('click', function(){
     }
 });
 
-function save {
-    //put data in data.json
-    $promille = $_POST['promille'];
-    $data = array('promille'=>$promille);
-    $jsonData = json_encode($data);
-    file_put_contents('data.json',$jsonData);
+    /*
+let history = [];
 
-    //fetch the data
-    $jsonData = file_get_contents('data.json');
-    $data = json_decode($jsonData, true);
-    echo $data['promille'];
+const addhistory = (ev)=>{
+    ev.preventDefault();
+    let promille =
+    {
+        id: Date.now(),
+        Promille: document.getElementById('promille').value
+    }
 }
+
+
+    localStorage.setItem('Meine', JSON.stringify('promille'));
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    document.getElementById('save').addEventListener('click', addPromille)
+})
+
+
+let data = {};
+
+const saveData = () => {
+    const promille = document.getElementsByName('promille')[0].value;
+
+    data['promille'] = promille;
+    const jsonData = JSON.stringify(data);
+    const url = 'myData.json';
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+    xhr.onload = function () {
+        // do something to response
+        console.log(xhr.responseText);
+    };
+    xhr.send(jsonData);
+
+}*/

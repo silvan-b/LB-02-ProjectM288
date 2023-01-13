@@ -1,5 +1,6 @@
 <!DOCTYPE>
-<html><head>
+<html>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <title>Promille-Rechner</title>
 
@@ -8,45 +9,57 @@
 </head>
 <body>
 <div class="login-box">
-<div class="container">
-    <h1> Promille-Rechner</h1>
-<form name="form1" action="#">
-    <table><tr>
-        <td>Körpergewicht:</td>
-        <td><input class="input" type="number" name="gewicht" size="5" onclick ="this.value=''">kg</td>
-    </tr><tr>
-        <td>Alkoholgehalt:</td>
-        <td><input class="input" type="number" name="alkohol" size="5" onclick ="this.value=''">%</td>
-    </tr><tr>
-        <td>Trinkmenge:</td>
-        <td><input class="input" type="number" name="menge" size="5" onclick ="this.value=''">ml</td>
-    </tr><tr>
-        <td>Zeitspanne (Trinken bis Fahrt):</td>
-        <td><input class="input" type="number" name="zeit" size="5" onclick ="this.value=''">h</td>
-    </tr></table>
-    <p>
-        <input type="radio" name="geschlecht" checked value="w">weiblich
-        <input type="radio" name="geschlecht" value="m">männlich<br>
-    </p>
+    <div class="container">
+        <h1> Promille-Rechner</h1>
+        <form name="form1" action="#">
+            <table>
+                <tr>
+                    <td>Körpergewicht:</td>
+                    <td><input class="input" type="number" name="gewicht" size="5" onclick="this.value=''">kg</td>
+                </tr>
+                <tr>
+                    <td>Alkoholgehalt:</td>
+                    <td><input class="input" type="number" name="alkohol" size="5" onclick="this.value=''">%</td>
+                </tr>
+                <tr>
+                    <td>Trinkmenge:</td>
+                    <td><input class="input" type="number" name="menge" size="5" onclick="this.value=''">ml</td>
+                </tr>
+                <tr>
+                    <td>Zeitspanne (Trinken bis Fahrt):</td>
+                    <td><input class="input" type="number" name="zeit" size="5" onclick="this.value=''">h</td>
+                </tr>
+            </table>
+            <p>
+                <input type="radio" name="geschlecht" checked value="w">weiblich
+                <input type="radio" name="geschlecht" value="m">männlich<br>
+            </p>
 
-    <p> <button class="button-85" role="button" type="button" onclick="rechnen(this.form)">Berechnen</button>
-    <table><tr>
-        <td>Voraussichtliche Promille</td>
-        <td><input class="input" id="promille" type="number" name="promille" value="" size="5" readonly></td>
-    </tr></table>
+            <p>
+                <button class="button-85" role="button" type="button" onclick="rechnen(this.form)">Berechnen</button>
+            <table>
+                <tr>
+                    <td>Voraussichtliche Promille</td>
+                    <td><input class="input" id="promille" type="number" name="promille" value="" size="5" readonly>
+                    </td>
+                    <button class="button-85" role="button" type="button" id="save">Speichern</button>
+                    <td>Letzte Daten</td>
+                    <td><input class="input" id="history" type="number" name="history" value="" size="5" readonly> </td>
+                </tr>
+            </table>
 
-    <div class="left">
-    <a href="index.html" id="submitLogin">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        Logout
-    </a>
-    </div>
-    </div>
-</form>
-    <input class="input" id="history" type="string" name="history" value="" size="5" readonly>
+            <div class="left">
+                <a href="index.html" id="submitLogin">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Logout
+                </a>
+            </div>
+
+    </form>
+        </div>
 </div>
 </body>
 </html>
