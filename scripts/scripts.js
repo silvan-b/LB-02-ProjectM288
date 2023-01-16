@@ -2,12 +2,19 @@ function rechnen(form)
 {
     let gewicht = form.gewicht.value;
     if(!gewicht || gewicht < 0) return alert('Unmögliches Gewicht');
-    let vol = form.alkohol.value;
-    if(!vol || vol < 0) return alert('Alkoholgehalt einfügen.');
+    let selgehalts = document.getElementById("selgehalt");
+    if(selgehalts="1"){
+        var vol = 5;
+    }else if(selgehalts="2"){
+        var vol = 12;
+    }else if(selgehalts="3"){
+        var vol = 40;
+    }
     let trinkmenge = form.menge.value;
     if(!trinkmenge || trinkmenge < 0) return alert('Trinkmenge einfügen.');
     let zeit = form.zeit.value ;
     if(!zeit || zeit < 0) zeit = 0;
+
     let g = form.geschlecht[0].checked ? 0.7 : 0.6;
     let alkohol = trinkmenge * vol / 100 * 0.8;
     let promille = alkohol / (gewicht * g ) * 0.9 - (0.1 * zeit);
@@ -18,10 +25,7 @@ function rechnen(form)
     form.promille.value = Math.round(promille * 100) / 100;
 }
 
-    let modal = document.getElementById('id01');{
-
-
-}
+    let modal = document.getElementById('id01');
 document.getElementById("submitLogin").addEventListener("click", (e) => {
     e.preventDefault();
 
@@ -33,6 +37,9 @@ document.getElementById("submitLogin").addEventListener("click", (e) => {
 })
 
 
+
+
+/*
 $('.switch label').on('click', function(){
     var indicator = $(this).parent('.switch').find('span');
     if ( $(this).hasClass('right') ){
@@ -40,9 +47,11 @@ $('.switch label').on('click', function(){
     } else {
         $(indicator).removeClass('right');
     }
-});
+})
 
-    /*
+/* Dropdown Menü mit in Json Format gespeicherten Auswahlen*/
+
+/*
 let history = [];
 
 const addhistory = (ev)=>{
@@ -53,14 +62,11 @@ const addhistory = (ev)=>{
         Promille: document.getElementById('promille').value
     }
 }
-
-
     localStorage.setItem('Meine', JSON.stringify('promille'));
 
 document.addEventListener('DOMContentLoaded', ()=>{
     document.getElementById('save').addEventListener('click', addPromille)
 })
-
 
 let data = {};
 

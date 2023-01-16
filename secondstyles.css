@@ -293,3 +293,6 @@ input[type=number] {
     margin-bottom: 50px;
 }
 
+select{
+    color: black;
+}

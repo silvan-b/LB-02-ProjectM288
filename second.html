@@ -18,10 +18,24 @@
                     <td><input class="input" type="number" name="gewicht" size="5" onclick="this.value=''">kg</td>
                 </tr>
                 <tr>
+
+
                     <td>Alkoholgehalt:</td>
-                    <td><input class="input" type="number" name="alkohol" size="5" onclick="this.value=''">%</td>
+                    <td><select name="selgehaltname" id="selgehalt" class="input"></select></td>
+                    <script> /* Das ist ein JSON-Format */
+                        html = "";
+                        obj = {
+                            "1": "Bier",
+                            "2": "Wein",
+                            "3": "Schnaps"
+                        }
+                        for (var key in obj) {
+                            html += "<option value=" + key + ">" + obj[key] + "</option>"
+                        }
+                        document.getElementById("selgehalt").innerHTML = html;
+
+                    </script>
                 </tr>
-                <tr>
                     <td>Trinkmenge:</td>
                     <td><input class="input" type="number" name="menge" size="5" onclick="this.value=''">ml</td>
                 </tr>
@@ -42,9 +56,6 @@
                     <td>Voraussichtliche Promille</td>
                     <td><input class="input" id="promille" type="number" name="promille" value="" size="5" readonly>
                     </td>
-                    <button class="button-85" role="button" type="button" id="save">Speichern</button>
-                    <td>Letzte Daten</td>
-                    <td><input class="input" id="history" type="number" name="history" value="" size="5" readonly> </td>
                 </tr>
             </table>
 
@@ -58,8 +69,8 @@
                 </a>
             </div>
 
-    </form>
-        </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>
